@@ -1,2 +1,2 @@
 Insert into git.test.sequencing ([date],[version])
-values(getdate(),3)
+values(getdate(),4)
