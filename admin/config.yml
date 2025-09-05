@@ -2,8 +2,8 @@ backend:
   name: github
   repo: BrennanWebb/brennanwebb.github.io
   branch: main
-  base_url: https://api.decapcms.org # New line to specify the auth server
-  auth_endpoint: auth             # New line to specify the auth path
+  base_url: https://netlify-cms-oauth.glitch.me # UPDATED auth server
+  auth_endpoint: auth
 
 # This is where your uploaded media assets will be stored
 media_folder: "assets/images/uploads"
@@ -11,12 +11,12 @@ public_folder: "/assets/images/uploads"
 
 # This defines the structure of your blog posts
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts" # The folder where blog posts will be stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
-    fields: # The fields for each document, usually in front matter
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
