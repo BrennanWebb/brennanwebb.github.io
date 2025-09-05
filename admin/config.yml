@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: BrennanWebb/brennanwebb.github.io # Your repository
-  branch: main # Or master, depending on your default branch name
+  repo: BrennanWebb/brennanwebb.github.io
+  branch: main
+  base_url: https://api.decapcms.org # New line to specify the auth server
+  auth_endpoint: auth             # New line to specify the auth path
 
 # This is where your uploaded media assets will be stored
 media_folder: "assets/images/uploads"
