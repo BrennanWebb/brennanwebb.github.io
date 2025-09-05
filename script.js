@@ -10,15 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const REPO_COUNT_LIMIT = 9;
     const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=${REPO_COUNT_LIMIT}`;
 
-    // --- NEW: List of repositories to exclude ---
-    // Add the exact name of any repositories you want to hide here.
-    const excludeRepos = ['Python', 'learnGit','brennanwebb.github.io'];
+    // --- UPDATED: 'pubSQL' is no longer excluded ---
+    const excludeRepos = [
+        'Python', 
+        'learnGit', 
+        'brennanwebb.github.io' // Hide the portfolio repo itself
+    ];
 
     const projectGrid = document.getElementById('project-grid');
 
     async function fetchGitHubRepos() {
         if (!projectGrid) {
-            console.error('Project grid element not found.');
             return;
         }
 
@@ -29,22 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const repos = await response.json();
 
-            // --- NEW: Filter the repositories ---
+            // Filter out excluded repositories
             const filteredRepos = repos.filter(repo => !excludeRepos.includes(repo.name));
 
-            // Clear the "Loading..." message
             projectGrid.innerHTML = '';
 
             if (filteredRepos.length === 0) {
-                projectGrid.innerHTML = '<p>No public repositories to display.</p>';
+                const repoSection = document.getElementById('repos');
+                if(repoSection) {
+                    repoSection.style.display = 'none';
+                }
                 return;
             }
 
-            // Create and append a card for each *filtered* repository
             filteredRepos.forEach(repo => {
+                const projectLink = repo.html_url;
+                const linkTarget = '_blank';
+
                 const card = document.createElement('a');
-                card.href = repo.html_url;
-                card.target = '_blank';
+                card.href = projectLink;
+                card.target = linkTarget;
                 card.rel = 'noopener noreferrer';
                 card.className = 'project-card';
 
@@ -61,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Failed to fetch GitHub repositories:', error);
-            projectGrid.innerHTML = '<p>Could not load projects. Please try again later.</p>';
+            projectGrid.innerHTML = '<p>Could not load repositories. Please try again later.</p>';
         }
     }
 

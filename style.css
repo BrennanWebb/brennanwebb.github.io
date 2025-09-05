@@ -64,11 +64,12 @@ a:hover {
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid var(--border-color);
     object-fit: cover;
+    transform: scaleX(-1); /* --- Corrected: Flips the image horizontally --- */
 }
 
 .bio .tagline {
@@ -128,6 +129,10 @@ a:hover {
 .project-card .language {
     font-size: 0.8rem;
     font-weight: bold;
+}
+
+.repo-header {
+    margin-top: 4rem;
 }
 
 /* --- Footer --- */

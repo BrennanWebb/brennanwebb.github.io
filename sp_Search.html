@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: sp_Search | Brennan Webb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="project-header">
+            <h1>Project: sp_Search</h1>
+            <p>A powerful and flexible search utility for Microsoft SQL Server.</p>
+        </header>
+
+        <main class="project-content">
+            <section id="goal">
+                <h2>Project Goal</h2>
+                <p>
+                    `sp_Search` is a stored procedure designed to drastically reduce the time and effort required for database developers and administrators to locate database objects, code snippets, configurations, and permissions within complex SQL Server environments.
+                </p>
+            </section>
+
+            <section id="tech">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li><strong>Language:</strong> T-SQL (Microsoft SQL Server)</li>
+                    <li><strong>Techniques:</strong> Dynamic SQL, System View Interrogation</li>
+                    <li><strong>Compatibility:</strong> SQL Server 2016 and higher</li>
+                </ul>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Unified Search:</strong> Scans across multiple databases from a single execution.</li>
+                    <li><strong>SQL Agent Integration:</strong> Searches not only object definitions but also the names, steps, and commands within SQL Agent Jobs.</li>
+                    <li><strong>Targeted Search Modes:</strong> Provides specific modes to find columns, indexes, permissions, object references, active query stats, partitions, and replication configurations.</li>
+                    <li><strong>Advanced Control:</strong> Offers parameters to filter by database, exclude system objects, and apply custom sorting or post-filtering to the results.</li>
+                </ul>
+            </section>
+
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>
+                    The procedure is designed to be self-documenting. You can download the script, install it in your `master` database, and run the following command for a full tutorial:
+                </p>
+                <pre><code>exec sp_Search;</code></pre>
+                
+                <div class="button-group">
+                    <a href="https://github.com/BrennanWebb/pubSQL/blob/main/Prod/Procedures/sp_Search.sql" class="button" target="_blank" rel="noopener noreferrer">View Source on GitHub</a>
+                    <a href="https://raw.githubusercontent.com/BrennanWebb/pubSQL/main/Prod/Procedures/sp_Search.sql" class="button" download="sp_Search.sql">Download .sql File</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="project-footer">
+            <a href="index.html">&larr; Back to Main Page</a>
+        </footer>
+    </div>
+
+</body>
+</html>

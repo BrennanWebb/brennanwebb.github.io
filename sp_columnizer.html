@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: sp_Columnizer | Brennan Webb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="project-header">
+            <h1>Project: sp_Columnizer</h1>
+            <p>A versatile T-SQL utility for rapid table analysis and scripting.</p>
+        </header>
+
+        <main class="project-content">
+            <section id="goal">
+                <h2>Project Goal</h2>
+                <p>
+                    A T-SQL stored procedure that acts as a developer's utility for quickly analyzing and scripting table structures. It streamlines common tasks like generating column lists for <code>SELECT</code> statements, creating aggregate queries, and performing quick data profiling, saving significant development time.
+                </p>
+            </section>
+
+            <section id="tech">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li><strong>Language:</strong> T-SQL (Microsoft SQL Server)</li>
+                    <li><strong>Techniques:</strong> Dynamic SQL, Temporary Procedures, System View Interrogation</li>
+                </ul>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Horizontal & Vertical Output:</strong> Generates clean, comma-separated column lists (horizontal) and detailed, line-by-line definitions (vertical).</li>
+                    <li><strong>Automated Aggregation:</strong> Instantly creates aggregate query skeletons (e.g., <code>COUNT()</code>, <code>SUM()</code>) for every column in a table.</li>
+                    <li><strong>Data Survey Tool:</strong> Performs basic data profiling by showing the top 10 distinct values and a total distinct count for each column.</li>
+                    <li><strong>Table Comparison:</strong> Compares the column metadata of two tables to quickly identify differences.</li>
+                    <li><strong>Temp Table Support:</strong> Works seamlessly with temporary tables, making it highly useful during development and debugging sessions.</li>
+                </ul>
+            </section>
+
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>
+                    The procedure is self-documenting. Download the script, install it, and run the following command for a full help section with usage examples:
+                </p>
+                <pre><code>exec sp_Columnizer;</code></pre>
+                
+                <div class="button-group">
+                    <a href="https://github.com/BrennanWebb/pubSQL/blob/main/Prod/Procedures/sp_Columnizer.sql" class="button" target="_blank" rel="noopener noreferrer">View Source on GitHub</a>
+                    <a href="https://raw.githubusercontent.com/BrennanWebb/pubSQL/main/Prod/Procedures/sp_Columnizer.sql" class="button" download="sp_Columnizer.sql">Download .sql File</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="project-footer">
+            <a href="index.html">&larr; Back to Main Page</a>
+        </footer>
+    </div>
+
+</body>
+</html>

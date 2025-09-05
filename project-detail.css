@@ -1,0 +1,77 @@
+/* --- Styles for Project Detail Pages --- */
+
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-header p {
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    font-style: italic;
+}
+
+.project-content section {
+    margin-bottom: 2.5rem;
+}
+
+.project-content h2 {
+    border-bottom: none;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.project-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project-content li {
+    margin-bottom: 0.5rem;
+}
+
+pre {
+    background-color: var(--surface-color);
+    color: var(--primary-text-color);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 1rem 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* New style for grouping buttons */
+.button-group {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem; /* Adds space between buttons */
+}
+
+.project-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
